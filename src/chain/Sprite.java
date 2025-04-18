@@ -1,4 +1,20 @@
+package chain;
+
+import java.util.Comparator;
+
 public class Sprite {
+
+  private int hp = 0;
+  private int position;
+  private Type type;
+
+
+  public static class PositionComparator implements Comparator<Sprite> {
+    @Override
+    public int compare(Sprite sprite1, Sprite sprite2) {
+      return Integer.compare(sprite1.getPosition(), sprite2.getPosition());
+    }
+  }
 
   public int getHp() {
     return hp;
@@ -8,8 +24,6 @@ public class Sprite {
     this.hp = hp;
   }
 
-  private int hp = 0;
-
   public int getPosition() {
     return position;
   }
@@ -18,8 +32,6 @@ public class Sprite {
     this.position = position;
   }
 
-  private int position;
-
   public Type getType() {
     return type;
   }
@@ -27,6 +39,4 @@ public class Sprite {
   public void setType(Type type) {
     this.type = type;
   }
-
-  private Type type;
 }

@@ -1,5 +1,7 @@
+package chain;
+
 public enum Type {
-  HERO(1), WATER(2), FIRE(3);
+  HERO(0), WATER(1), FIRE(2);
 
   public int getValue() {
     return value;
